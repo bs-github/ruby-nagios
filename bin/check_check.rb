@@ -113,9 +113,9 @@ def main(args)
       thresholds["CRITICAL"] = val.to_i
     end
 
-    thresholds["UNKNOWN"] = 1
+    thresholds["UNKNOWN"] = 0
     opts.on("-u NUMBER", "--unknown NUMBER",
-            "Exit with a unknown state if more than x checks are in unknown state (defaults to 1, 0 disables the check)") do |val|
+            "Exit with a unknown state if more than x checks are in unknown state (defaults to 0, 0 disables the check)") do |val|
       thresholds["UNKNOWN"] = val.to_i
     end
   end # OptionParser.new
